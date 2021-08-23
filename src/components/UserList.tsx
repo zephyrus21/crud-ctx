@@ -14,21 +14,25 @@ const UserList: React.FC<UserListProps> = ({}) => {
 
   return (
     <ListGroup>
-      {users.map((user: any) => (
-        <ListGroupItem key={user.id} className='d-flex align-items-center'>
-          <strong>{user.name}</strong>
-          <div style={{ marginLeft: "auto" }}>
-            <Link className='btn btn-warning m-1' to={`/edit/${user.id}`}>
-              Edit
-            </Link>
-            <Button
-              color='danger'
-              onClick={() => dispatch(removeUser(user.id))}>
-              Delete
-            </Button>
-          </div>
-        </ListGroupItem>
-      ))}
+      {users.length > 0 ? (
+        users.map((user: any) => (
+          <ListGroupItem key={user.id} className='d-flex align-items-center'>
+            <strong>{user.name}</strong>
+            <div style={{ marginLeft: "auto" }}>
+              <Link className='btn btn-warning m-1' to={`/edit/${user.id}`}>
+                Edit
+              </Link>
+              <Button
+                color='danger'
+                onClick={() => dispatch(removeUser(user.id))}>
+                Delete
+              </Button>
+            </div>
+          </ListGroupItem>
+        ))
+      ) : (
+        <h2>No users</h2>
+      )}
     </ListGroup>
   );
 };

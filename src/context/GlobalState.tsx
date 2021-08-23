@@ -7,11 +7,7 @@ interface MyContext {
 }
 
 const initialState: any = {
-  users: [
-    { id: 1, name: "John Doe" },
-    { id: 2, name: "Amanda Holden" },
-    { id: 3, name: "Derek Brown" },
-  ],
+  users: [],
 };
 
 export const GlobalContext = createContext<MyContext>(initialState);

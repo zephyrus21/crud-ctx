@@ -3,6 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { addUser } from "../context/action";
 import { GlobalContext } from "../context/GlobalState";
+import { v4 as uuid } from "uuid";
 
 interface AddUserProps {}
 
@@ -13,7 +14,7 @@ const AddUser: React.FC<AddUserProps> = ({}) => {
 
   const onSubmitHandler = () => {
     const newUser = {
-      id: 1,
+      id: uuid(),
       name: name,
     };
     dispatch(addUser(newUser));

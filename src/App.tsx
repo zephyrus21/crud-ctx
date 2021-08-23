@@ -14,7 +14,6 @@ const App: React.FC<AppProps> = ({}) => {
     <div style={{ maxWidth: "40rem", margin: "1rem auto" }}>
       <GlobalProvider>
         <Router>
-          <h1>NavBar</h1>
           <Switch>
             <Route path='/' exact component={Home} />
             <Route path='/edit/:id' component={EditUser} />

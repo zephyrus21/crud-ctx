@@ -10,6 +10,15 @@ export default (state: any, action: any) => {
         users: [action.payload, ...state.users],
       };
 
+    case "EDIT_USER":
+      const updatedUser = action.payload;
+      const updateUsers = state.users.map((user: any) =>
+        user.id === updatedUser.id ? updatedUser : user
+      );
+      return {
+        users: updateUsers,
+      };
+
     default:
       return state;
   }
