@@ -4,9 +4,7 @@ import { Button, ListGroup, ListGroupItem } from "reactstrap";
 import { removeUser } from "../context/action";
 import { GlobalContext } from "../context/GlobalState";
 
-interface UserListProps {}
-
-const UserList: React.FC<UserListProps> = ({}) => {
+const UserList: React.FC = () => {
   const {
     state: { users },
     dispatch,

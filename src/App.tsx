@@ -1,15 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import AddUser from "./pages/AddUser";
 import EditUser from "./pages/EditUser";
-import Home from "./pages/Home";
-
-import "bootstrap/dist/css/bootstrap.min.css";
 import { GlobalProvider } from "./context/GlobalState";
 
-interface AppProps {}
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const App: React.FC<AppProps> = ({}) => {
+const App: React.FC = () => {
   return (
     <div style={{ maxWidth: "40rem", margin: "1rem auto" }}>
       <GlobalProvider>

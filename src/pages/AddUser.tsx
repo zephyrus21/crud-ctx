@@ -5,9 +5,7 @@ import { addUser } from "../context/action";
 import { GlobalContext } from "../context/GlobalState";
 import { v4 as uuid } from "uuid";
 
-interface AddUserProps {}
-
-const AddUser: React.FC<AddUserProps> = ({}) => {
+const AddUser: React.FC = () => {
   const history = useHistory();
   const { dispatch } = useContext(GlobalContext);
   const [name, setName] = useState("");

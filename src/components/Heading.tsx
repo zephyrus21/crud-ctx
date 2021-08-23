@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Nav, Navbar, NavbarBrand, NavItem } from "reactstrap";
 
-interface HeadingProps {}
-
-const Heading: React.FC<HeadingProps> = ({}) => {
+const Heading: React.FC = () => {
   return (
     <Navbar>
       <Container>
