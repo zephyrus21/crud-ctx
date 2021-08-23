@@ -4,7 +4,6 @@ import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { addUser } from "../context/action";
 import { GlobalContext } from "../context/GlobalState";
 
-
 interface AddUserProps {}
 
 const AddUser: React.FC<AddUserProps> = ({}) => {
@@ -14,7 +13,7 @@ const AddUser: React.FC<AddUserProps> = ({}) => {
 
   const onSubmitHandler = () => {
     const newUser = {
-      id: ,
+      id: 1,
       name: name,
     };
     dispatch(addUser(newUser));

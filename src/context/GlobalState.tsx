@@ -1,9 +1,12 @@
 import React, { createContext, useReducer } from "react";
 import reducer from "./reducer";
 
-interface GlobalProviderProps {}
+interface MyContext {
+  state: any;
+  dispatch: React.Dispatch<any>;
+}
 
-const initialState = {
+const initialState: any = {
   users: [
     { id: 1, name: "John Doe" },
     { id: 2, name: "Amanda Holden" },
@@ -11,13 +14,13 @@ const initialState = {
   ],
 };
 
-export const GlobalContext = createContext(initialState);
+export const GlobalContext = createContext<MyContext>(initialState);
 
-export const GlobalProvider: React.FC<GlobalProviderProps> = ({ children }) => {
+export const GlobalProvider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <GlobalContext.Provider value={{ users: state.users }}>
+    <GlobalContext.Provider value={{ state, dispatch }}>
       {children}
     </GlobalContext.Provider>
   );
