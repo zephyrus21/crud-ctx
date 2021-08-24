@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
-import { GlobalContext } from "../context/GlobalState";
+import { GlobalContext } from "../context/GlobalContext";
 import { editUser } from "../context/action";
 
 interface EditUserProps {

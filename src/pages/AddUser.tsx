@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { addUser } from "../context/action";
-import { GlobalContext } from "../context/GlobalState";
+import { GlobalContext } from "../context/GlobalContext";
 import { v4 as uuid } from "uuid";
 
 const AddUser: React.FC = () => {

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import AddUser from "./pages/AddUser";
 import EditUser from "./pages/EditUser";
-import { GlobalProvider } from "./context/GlobalState";
+import { GlobalProvider } from "./context/GlobalContext";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Button, ListGroup, ListGroupItem } from "reactstrap";
 import { removeUser } from "../context/action";
-import { GlobalContext } from "../context/GlobalState";
+import { GlobalContext } from "../context/GlobalContext";
 
 const UserList: React.FC = () => {
   const {
